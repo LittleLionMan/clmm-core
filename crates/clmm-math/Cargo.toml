@@ -1,0 +1,22 @@
+[package]
+name = "clmm-math"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "Bit-exact port of the Raydium CLMM math libraries without Anchor dependencies"
+
+[lib]
+doctest = false
+
+[dependencies]
+uint = { git = "https://github.com/raydium-io/parity-common", rev = "43a0303b9c2a23a00508816bd6d5a2e9381f143c", package = "uint" }
+thiserror = "2"
+
+[dev-dependencies]
+quickcheck = "0.9"
+proptest = "1.0"
+rand = "0.8.5"
+
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(feature, values("enable-power"))'] }

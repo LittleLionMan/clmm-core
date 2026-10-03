@@ -1,0 +1,1 @@
+pub const FEE_RATE_DENOMINATOR_VALUE: u32 = 1_000_000;
