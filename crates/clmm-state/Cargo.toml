@@ -1,0 +1,18 @@
+[package]
+name = "clmm-state"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+description = "Decoding and inspection of Raydium CLMM accounts using the original program crate"
+
+[lib]
+doctest = false
+
+[dependencies]
+raydium-clmm.workspace = true
+anchor-lang.workspace = true
+bytemuck.workspace = true
+thiserror.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+base64.workspace = true
